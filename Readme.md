@@ -1,3 +1,5 @@
+# Example blue green deployment using Istio
+In this example, I use NodePort for IstioGateway so in somecase, you shoud change NodePort to LoadBalancer.<br>
 Install Istio:
 * Install `Custom Resource Definition` (CDR) for kubernetes: `kubectl apply -f crds.yml`
 * Install istio within kubernetes: `kubectl apply -f istio.yml`
