@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: blue-green
 spec:
-  host: nginx
+  host: nginxsvc
   subsets:
   - name: v1
     labels:

@@ -11,10 +11,10 @@ spec:
   http:
     - route:
       - destination:
-          host: nginx
+          host: nginxsvc
           subset: v1
-        weight: 50
+        weight: 30
       - destination:
-          host: nginx
+          host: nginxsvc
           subset: v2
-        weight: 50 
+        weight: 70
