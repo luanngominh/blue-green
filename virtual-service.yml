@@ -13,8 +13,8 @@ spec:
       - destination:
           host: nginxsvc
           subset: v1
-        weight: 30
+        weight: 50
       - destination:
           host: nginxsvc
           subset: v2
-        weight: 70
+        weight: 50
