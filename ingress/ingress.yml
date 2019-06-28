@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: api.luanngominh.me
+    http:
+      paths:
+      - path: /blue(/|$)(.*)
+        backend:
+          serviceName: bluesvc
+          servicePort: 80
+      - path: /green(/|$)(.*)
+        backend:
+          serviceName: greensvc
+          servicePort: 80
